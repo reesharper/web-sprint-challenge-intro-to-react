@@ -1,11 +1,20 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
 
+const kf = keyframes`
+    100% {
+        opacity: 1;
+    }
+`
+
 const StyledCharacter = styled.div`
 
-    color: black;
-    background: white;
-    width: 15%;
+    opacity: 0;
+    animation: ${kf} .5s ease-in-out forwards;
+    color: white;
+    // background: white;
+    background-image: url("https://cdn.mos.cms.futurecdn.net/rXQiLcfc89vp3EbYQ58ERH-1200-80.jpeg");
+    width: 23%;
     margin: 3% auto;
     border-radius: 50px;
     padding: 20px;

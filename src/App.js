@@ -5,11 +5,15 @@ import Character from './components/Character';
 import styled, {keyframes} from 'styled-components'
 
 
-const styledApp = styled.div`
+const StyledApp = styled.div`
 
-  color: black
   display: flex;
   flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  margin: 0 auto;
 
 `
 
@@ -40,14 +44,16 @@ const App = () => {
   }, [])
 
   return (
-    <styledApp className="App">
+    <div className='App'>
       <h1 className="Header">Character Heights</h1>
+    <StyledApp>
       {
         characters.map(char => {
           return <Character key={char.id} character={char} />
         })
       }
-    </styledApp>
+    </StyledApp>
+    </div>
   );
 }
 
